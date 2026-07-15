@@ -1,3 +1,5 @@
+import { FolderGit2, Code2, GraduationCap, BriefcaseBusiness } from "lucide-react";
+
 export default function About() {
   return (
     <section
@@ -35,23 +37,35 @@ export default function About() {
 
           <div className="grid grid-cols-2 gap-6">
 
-            <div className="p-6 rounded-2xl shadow bg-white">
-              <h3 className="text-3xl font-bold text-blue-600">10+</h3>
+            <div className="p-6 rounded-2xl shadow bg-white border-l-4 border-blue-500 hover:shadow-lg transition">
+              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <FolderGit2 className="text-blue-600 w-7 h-7" />
+              </div>
+              <h3 className="text-blue-600 text-3xl font-bold">10+</h3>
               <p className="mt-2 text-gray-500">Projects Built</p>
             </div>
 
-            <div className="p-6 rounded-2xl shadow bg-white">
-              <h3 className="text-3xl font-bold text-blue-600">10+</h3>
+            <div className="p-6 rounded-2xl shadow bg-white border-l-4 border-violet-500 hover:shadow-lg transition">
+              <div className="w-14 h-14 rounded-xl bg-violet-100 flex items-center justify-center mb-4">
+                <Code2 className="text-violet-600 w-7 h-7" />
+              </div>
+              <h3 className="text-violet-600 text-3xl font-bold">10+</h3>
               <p className="mt-2 text-gray-500">Technologies</p>
             </div>
 
-            <div className="p-6 rounded-2xl shadow bg-white">
-              <h3 className="text-3xl font-bold text-blue-600">AI & DS</h3>
+            <div className="p-6 rounded-2xl shadow bg-white border-l-4 border-emerald-500 hover:shadow-lg transition">
+              <div className="w-14 h-14 rounded-xl bg-emerald-100 flex items-center justify-center mb-4">
+                <GraduationCap className="text-emerald-600 w-7 h-7" />
+              </div>
+              <h3 className="text-emerald-600 text-3xl font-bold">AI & DS</h3>
               <p className="mt-2 text-gray-500">Student</p>
             </div>
 
-            <div className="p-6 rounded-2xl shadow bg-white">
-              <h3 className="text-3xl font-bold text-blue-600">Open</h3>
+            <div className="p-6 rounded-2xl shadow bg-white border-l-4 border-orange-500 hover:shadow-lg transition">
+              <div className="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center mb-4">
+                <BriefcaseBusiness className="text-orange-500 w-7 h-7" />
+              </div>
+              <h3 className="text-orange-500 text-3xl font-bold">Open</h3>
               <p className="mt-2 text-gray-500">To Opportunities</p>
             </div>
 

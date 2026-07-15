@@ -1,24 +1,40 @@
 import { motion } from "framer-motion";
-import { Code2, FolderGit2, Award, GraduationCap } from "lucide-react";
+import { Code2, FolderGit2, BadgeCheck, GraduationCap } from "lucide-react";
 
 const stats = [
   {
-    icon: <FolderGit2 size={34} />,
+    icon: (
+      <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+        <FolderGit2 className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
     value: "10+",
     title: "Projects Built",
   },
   {
-    icon: <Code2 size={34} />,
+    icon: (
+      <div className="w-14 h-14 rounded-2xl bg-violet-100 flex items-center justify-center">
+        <Code2 className="w-8 h-8 text-violet-600" />
+      </div>
+    ),
     value: "10+",
     title: "Technologies",
   },
   {
-    icon: <Award size={34} />,
+    icon: (
+      <div className="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center">
+        <BadgeCheck className="w-8 h-8 text-amber-500" />
+      </div>
+    ),
     value: "2+",
     title: "Certificates",
   },
   {
-    icon: <GraduationCap size={34} />,
+    icon: (
+      <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center">
+        <GraduationCap className="w-8 h-8 text-emerald-600" />
+      </div>
+    ),
     value: "AI & DS",
     title: "Student",
   },
@@ -40,7 +56,7 @@ export default function Stats() {
               viewport={{ once: true }}
               className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition"
             >
-              <div className="text-blue-600 mb-5">
+              <div className="mb-5">
                 {item.icon}
               </div>
 
