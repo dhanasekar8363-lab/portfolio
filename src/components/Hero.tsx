@@ -6,14 +6,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-white"
+      className="min-h-[85vh] lg:min-h-screen flex items-center bg-white"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center px-8">
 
         <motion.div
           initial={{opacity:0,y:40}}
           animate={{opacity:1,y:0}}
           transition={{duration:.7}}
+          className="text-center lg:text-left"
         >
 
           <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full">
@@ -22,7 +23,7 @@ const Hero = () => {
 
           </span>
 
-          <h1 className="text-6xl font-bold mt-8 leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mt-8 leading-tight">
 
             Hi,
 
@@ -38,14 +39,14 @@ const Hero = () => {
 
           </h1>
 
-          <p className="text-gray-600 mt-8 text-xl leading-9">
+          <p className="text-gray-600 mt-8 text-lg lg:text-xl leading-8">
 
             I build modern mobile and web applications that solve real-world
             problems using React, Kotlin and modern technologies.
 
           </p>
 
-          <div className="flex gap-5 mt-10">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
 
             <button className="bg-blue-600 text-white px-7 py-4 rounded-xl">
 
@@ -61,7 +62,7 @@ const Hero = () => {
 
           </div>
 
-          <div className="flex gap-6 mt-10 text-3xl">
+          <div className="flex justify-center lg:justify-start gap-6 mt-8 text-3xl">
 
             <a
               href="https://github.com/dhanasekar8363-lab"
@@ -96,19 +97,15 @@ const Hero = () => {
           initial={{opacity:0,scale:.8}}
           animate={{opacity:1,scale:1}}
           transition={{duration:.8}}
-          className="flex justify-center items-center"
+          className="flex justify-center mt-10 lg:mt-0"
         >
 
-          <div className="w-[420px] h-[420px] rounded-full bg-blue-100 flex items-center justify-center">
-
-            <div className="p-2 bg-white rounded-full shadow-2xl">
-              <img
-                src="/profile/profile.png"
-                alt="Dhanasekar"
-                className="w-[380px] h-[380px] object-cover rounded-full"
-              />
-            </div>
-
+          <div className="p-2 bg-white rounded-full shadow-2xl">
+            <img
+              src="/profile/profile.png"
+              alt="Dhanasekar"
+              className="w-64 h-64 sm:w-72 sm:h-72 lg:w-[430px] lg:h-[430px] rounded-full object-cover border-8 border-white shadow-2xl"
+            />
           </div>
 
         </motion.div>

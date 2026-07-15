@@ -20,37 +20,37 @@ export default function ProjectCard({
   demo,
 }: Props) {
   return (
-    <div className="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition duration-300">
+    <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition duration-300">
 
       <Link to={`/project/${title.toLowerCase()}`}>
 
-        <div className="relative bg-gray-100 flex justify-center items-center h-[340px]">
+        <div className="relative bg-gray-100 flex justify-center items-center h-52 sm:h-64 lg:h-[340px]">
 
           <img
             src={images[0]}
             alt={title}
-            className="h-[320px] object-contain"
+            className="h-full object-contain"
           />
 
         </div>
 
       </Link>
 
-      <div className="p-6">
+      <div className="p-5 lg:p-6">
 
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-2xl lg:text-3xl font-bold">
 
           {title}
 
         </h2>
 
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-base lg:text-lg text-gray-600 leading-7">
 
           {description}
 
         </p>
 
-        <div className="flex flex-wrap gap-2 mt-5">
+        <div className="flex flex-wrap gap-2 mt-4">
 
           {tech.map((item) => (
             <span
@@ -63,7 +63,7 @@ export default function ProjectCard({
 
         </div>
 
-        <div className="flex gap-4 mt-6">
+        <div className="flex flex-wrap gap-4 mt-5">
 
           <a
             href={github}
