@@ -8,13 +8,13 @@ const Hero = () => {
       id="home"
       className="min-h-[85vh] lg:min-h-screen flex items-center bg-white"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center px-8">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-10 lg:gap-16 px-8">
 
         <motion.div
           initial={{opacity:0,y:40}}
           animate={{opacity:1,y:0}}
           transition={{duration:.7}}
-          className="text-center lg:text-left"
+          className="text-center lg:text-left flex flex-col items-center lg:items-start"
         >
 
           <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full">
@@ -23,7 +23,7 @@ const Hero = () => {
 
           </span>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mt-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mt-8 leading-tight">
 
             Hi,
 
@@ -39,22 +39,22 @@ const Hero = () => {
 
           </h1>
 
-          <p className="text-gray-600 mt-8 text-lg lg:text-xl leading-8">
+          <p className="text-gray-600 mt-8 text-base sm:text-lg leading-8">
 
             I build modern mobile and web applications that solve real-world
             problems using React, Kotlin and modern technologies.
 
           </p>
 
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-8 w-full sm:w-auto">
 
-            <button className="bg-blue-600 text-white px-7 py-4 rounded-xl">
+            <button className="bg-blue-600 text-white px-7 py-4 rounded-xl w-full sm:w-auto">
 
               View Projects
 
             </button>
 
-            <button className="border px-7 py-4 rounded-xl">
+            <button className="border px-7 py-4 rounded-xl w-full sm:w-auto">
 
               Contact Me
 
@@ -97,14 +97,14 @@ const Hero = () => {
           initial={{opacity:0,scale:.8}}
           animate={{opacity:1,scale:1}}
           transition={{duration:.8}}
-          className="flex justify-center mt-10 lg:mt-0"
+          className="mb-6 lg:mb-0 flex justify-center"
         >
 
           <div className="p-2 bg-white rounded-full shadow-2xl">
             <img
               src="/profile/profile.png"
               alt="Dhanasekar"
-              className="w-64 h-64 sm:w-72 sm:h-72 lg:w-[430px] lg:h-[430px] rounded-full object-cover border-8 border-white shadow-2xl"
+              className="w-40 h-40 sm:w-48 sm:h-48 lg:w-[420px] lg:h-[420px] rounded-full object-cover border-8 border-white shadow-2xl"
             />
           </div>
 
