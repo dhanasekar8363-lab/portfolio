@@ -54,7 +54,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-8">
 
           {skillCategories.map((category, index) => {
             const colors = [
@@ -70,19 +70,23 @@ export default function Skills() {
             return (
               <div
                 key={category.title}
-                className={`rounded-2xl border shadow p-5 sm:p-6 lg:p-8 h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${c.card}`}
+                className={`rounded-2xl border shadow p-4 sm:p-5 lg:p-8 h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-row lg:flex-col items-center lg:items-start gap-4 lg:gap-0 ${c.card}`}
               >
-                <div className="text-3xl mb-3">{category.icon}</div>
+                {/* Icon + Title: side-by-side on mobile, stacked on desktop */}
+                <div className="flex flex-row lg:flex-col items-center lg:items-start gap-3 lg:gap-0 min-w-[120px] shrink-0">
+                  <div className="text-2xl lg:text-3xl lg:mb-3">{category.icon}</div>
 
-                <h3 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${c.heading}`}>
-                  {category.title}
-                </h3>
+                  <h3 className={`text-base sm:text-lg lg:text-2xl font-bold lg:mb-6 ${c.heading}`}>
+                    {category.title}
+                  </h3>
+                </div>
 
-                <div className="flex flex-wrap gap-3">
+                {/* Badges: right-aligned on mobile, left on desktop */}
+                <div className="flex flex-wrap justify-end lg:justify-start gap-2 lg:gap-3 flex-1">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className={`px-3 py-1.5 text-xs sm:text-sm rounded-full font-medium transition ${c.badge}`}
+                      className={`px-2.5 py-1 lg:px-3 lg:py-1.5 text-xs lg:text-sm rounded-full font-medium transition ${c.badge}`}
                     >
                       {skill}
                     </span>
