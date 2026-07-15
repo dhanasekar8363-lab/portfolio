@@ -17,35 +17,43 @@ export default function Projects() {
           Some of my recent work
         </p>
 
-        <div
-          className="
-            flex
-            gap-6
-            overflow-x-auto
-            snap-x
-            snap-mandatory
-            lg:grid
-            lg:grid-cols-3
-            lg:overflow-visible
-            pb-4
-            mt-20
-          "
-        >
+        <div className="relative mt-20">
 
-          {projects.map((project) => (
-            <div
-              key={project.title}
-              className="
-                snap-center
-                flex-shrink-0
-                w-[90vw]
-                sm:w-[420px]
-                lg:w-auto
-              "
-            >
-              <ProjectCard {...project} />
-            </div>
-          ))}
+          <div
+            className="
+              flex
+              gap-4
+              overflow-x-auto
+              snap-x
+              snap-mandatory
+              px-4
+              lg:px-0
+              lg:grid
+              lg:grid-cols-3
+              lg:gap-8
+              lg:overflow-visible
+              pb-4
+            "
+          >
+
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="
+                  snap-center
+                  flex-shrink-0
+                  w-[82vw]
+                  sm:w-[380px]
+                  lg:w-auto
+                "
+              >
+                <ProjectCard {...project} />
+              </div>
+            ))}
+
+          </div>
+
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#FFF5F7] to-transparent lg:hidden" />
 
         </div>
 
