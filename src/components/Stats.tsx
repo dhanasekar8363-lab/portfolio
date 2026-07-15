@@ -62,7 +62,7 @@ export default function Stats() {
 
               <div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold">
+              <h2 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">
                 {item.value}
               </h2>
 
