@@ -48,13 +48,19 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mt-8 w-full sm:w-auto">
 
-            <button className="bg-blue-600 text-white px-7 py-4 rounded-xl w-full sm:w-auto">
+            <button
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              className="bg-blue-600 text-white px-7 py-4 rounded-xl w-full sm:w-auto"
+            >
 
               View Projects
 
             </button>
 
-            <button className="border px-7 py-4 rounded-xl w-full sm:w-auto">
+            <button
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              className="border px-7 py-4 rounded-xl w-full sm:w-auto"
+            >
 
               Contact Me
 
