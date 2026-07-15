@@ -6,9 +6,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-[85vh] lg:min-h-screen flex items-center bg-white"
+      className="py-24 lg:py-32 flex items-center bg-white"
     >
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-10 lg:gap-16 px-8">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-10 lg:gap-10 xl:gap-14 px-8">
 
         <motion.div
           initial={{opacity:0,y:40}}
@@ -23,7 +23,7 @@ const Hero = () => {
 
           </span>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mt-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mt-8 leading-tight">
 
             Hi,
 
@@ -104,7 +104,7 @@ const Hero = () => {
             <img
               src="/profile/profile.png"
               alt="Dhanasekar"
-              className="w-40 h-40 sm:w-48 sm:h-48 lg:w-[420px] lg:h-[420px] rounded-full object-cover border-8 border-white shadow-2xl"
+              className="w-40 h-40 sm:w-48 sm:h-48 lg:w-[360px] lg:h-[360px] xl:w-[400px] xl:h-[400px] rounded-full object-cover border-8 border-white shadow-2xl"
             />
           </div>
 
