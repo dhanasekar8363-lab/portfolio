@@ -1,0 +1,70 @@
+.visitor-badge{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:12px 18px;
+
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(18px);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12);
+
+    z-index:9999;
+
+    animation:slideUp .6s ease;
+}
+
+.visitor-badge h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.visitor-badge p{
+    margin:0;
+    color:#666;
+    font-size:13px;
+}
+
+.eye{
+    font-size:26px;
+}
+
+@keyframes slideUp{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@media(max-width:768px){
+
+.visitor-badge{
+
+bottom:16px;
+right:16px;
+
+padding:10px 15px;
+
+}
+
+.visitor-badge h3{
+
+font-size:18px;
+
+}
+
+}
