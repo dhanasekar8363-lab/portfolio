@@ -54,19 +54,19 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-row sm:flex-col items-center sm:items-start gap-4 sm:gap-0"
+              className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center gap-3"
             >
-              <div className="mb-0 sm:mb-4 shrink-0">
+              <div className="shrink-0">
                 {item.icon}
               </div>
 
               <div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold whitespace-nowrap">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold whitespace-nowrap">
                 {item.value}
               </h2>
 
-              <p className="text-gray-500 text-sm sm:text-base mt-1 sm:mt-2">
+              <p className="text-gray-500 text-xs sm:text-sm lg:text-base">
                 {item.title}
               </p>
 
