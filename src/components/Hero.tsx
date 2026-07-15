@@ -62,13 +62,13 @@ const Hero = () => {
 
           </div>
 
-          <div className="flex justify-center lg:justify-start gap-6 mt-8 text-3xl">
+          <div className="flex items-center justify-center lg:justify-start gap-4 mt-8">
 
             <a
               href="https://github.com/dhanasekar8363-lab"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition"
+              className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-gray-900 hover:text-black hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-2xl"
             >
               <FaGithub />
             </a>
@@ -77,14 +77,14 @@ const Hero = () => {
               href="https://www.linkedin.com/in/dhanasekar-y-492630396/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition"
+              className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-[#0A66C2] hover:text-[#004182] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-2xl"
             >
               <FaLinkedin />
             </a>
 
             <a
               href="mailto:dhanasekar8363@gmail.com"
-              className="hover:text-blue-600 transition"
+              className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-[#EA4335] hover:text-[#C5221F] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-2xl"
             >
               <MdEmail />
             </a>
