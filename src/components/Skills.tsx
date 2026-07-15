@@ -1,26 +1,32 @@
 const skillCategories = [
   {
     title: "Frontend",
+    icon: "💻",
     skills: ["React", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Vite"],
   },
   {
     title: "Backend",
+    icon: "🗄️",
     skills: ["Node.js", "Express.js", "Supabase", "PostgreSQL", "Firebase"],
   },
   {
     title: "Mobile",
+    icon: "📱",
     skills: ["Kotlin", "Android SDK", "Jetpack", "Capacitor"],
   },
   {
     title: "Programming",
+    icon: "⚡",
     skills: ["JavaScript", "TypeScript", "Kotlin", "Java", "SQL"],
   },
   {
     title: "Tools",
+    icon: "🛠️",
     skills: ["Git", "GitHub", "VS Code", "Android Studio", "Figma"],
   },
   {
     title: "Currently Learning",
+    icon: "🚀",
     skills: ["Machine Learning", "Docker", "REST APIs", "System Design"],
   },
 ];
@@ -50,27 +56,41 @@ export default function Skills() {
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
 
-          {skillCategories.map((category) => (
-            <div
-              key={category.title}
-              className="bg-white rounded-2xl shadow p-5 sm:p-6 lg:p-8 h-full hover:shadow-xl transition-all duration-300"
-            >
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
-                {category.title}
-              </h3>
+          {skillCategories.map((category, index) => {
+            const colors = [
+              { card: "bg-blue-50 border-blue-200",     heading: "text-blue-700",   badge: "bg-blue-100 text-blue-700"     },
+              { card: "bg-purple-50 border-purple-200", heading: "text-purple-700", badge: "bg-purple-100 text-purple-700" },
+              { card: "bg-green-50 border-green-200",   heading: "text-green-700",  badge: "bg-green-100 text-green-700"   },
+              { card: "bg-yellow-50 border-yellow-200", heading: "text-yellow-700", badge: "bg-yellow-100 text-yellow-700" },
+              { card: "bg-pink-50 border-pink-200",     heading: "text-pink-700",   badge: "bg-pink-100 text-pink-700"     },
+              { card: "bg-cyan-50 border-cyan-200",     heading: "text-cyan-700",   badge: "bg-cyan-100 text-cyan-700"     },
+            ];
+            const c = colors[index] ?? colors[0];
 
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-xs sm:text-sm rounded-full bg-blue-100 text-blue-700 font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            return (
+              <div
+                key={category.title}
+                className={`rounded-2xl border shadow p-5 sm:p-6 lg:p-8 h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${c.card}`}
+              >
+                <div className="text-3xl mb-3">{category.icon}</div>
+
+                <h3 className={`text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ${c.heading}`}>
+                  {category.title}
+                </h3>
+
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className={`px-3 py-1.5 text-xs sm:text-sm rounded-full font-medium transition ${c.badge}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
 
         </div>
 
