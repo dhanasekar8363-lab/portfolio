@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-gray-50"
+      className="py-24 bg-gradient-to-b from-white via-blue-50 to-purple-50"
     >
       <div className="max-w-7xl mx-auto px-8">
 
@@ -36,9 +36,11 @@ export default function Contact() {
 
           <div className="space-y-6">
 
-            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow">
+            <div className="flex items-center gap-4 p-5 bg-gradient-to-r from-blue-50 to-white rounded-2xl border border-blue-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-              <Mail className="text-blue-600" />
+              <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
+                <Mail className="text-blue-600" />
+              </div>
 
               <div>
                 <h3 className="font-semibold">Email</h3>
@@ -49,9 +51,11 @@ export default function Contact() {
 
             </div>
 
-            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow">
+            <div className="flex items-center gap-4 p-5 bg-gradient-to-r from-green-50 to-white rounded-2xl border border-green-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-              <Phone className="text-blue-600" />
+              <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center shrink-0">
+                <Phone className="text-green-600" />
+              </div>
 
               <div>
                 <h3 className="font-semibold">Phone</h3>
@@ -62,9 +66,11 @@ export default function Contact() {
 
             </div>
 
-            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow">
+            <div className="flex items-center gap-4 p-5 bg-gradient-to-r from-rose-50 to-white rounded-2xl border border-rose-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
-              <MapPin className="text-blue-600" />
+              <div className="w-14 h-14 rounded-2xl bg-rose-100 flex items-center justify-center shrink-0">
+                <MapPin className="text-rose-500" />
+              </div>
 
               <div>
                 <h3 className="font-semibold">Location</h3>
@@ -77,7 +83,7 @@ export default function Contact() {
 
           </div>
 
-          <div className="bg-white rounded-3xl shadow p-8">
+          <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-3xl border border-blue-100 shadow-xl p-8">
 
             <h3 className="text-2xl font-bold mb-6">
               Connect With Me
