@@ -20,7 +20,7 @@ export default function ProjectCard({
   demo,
 }: Props) {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition duration-300">
+    <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col h-full">
 
       <Link to={`/project/${title.toLowerCase()}`}>
 
@@ -36,7 +36,7 @@ export default function ProjectCard({
 
       </Link>
 
-      <div className="p-5 lg:p-6">
+      <div className="p-5 lg:p-6 flex flex-col flex-1">
 
         <h2 className="text-2xl lg:text-3xl font-bold">
 
@@ -44,7 +44,7 @@ export default function ProjectCard({
 
         </h2>
 
-        <p className="mt-4 text-base lg:text-lg text-gray-600 leading-7">
+        <p className="mt-4 text-base lg:text-lg text-gray-600 leading-7 min-h-[72px]">
 
           {description}
 
@@ -63,7 +63,7 @@ export default function ProjectCard({
 
         </div>
 
-        <div className="flex flex-wrap gap-4 mt-5">
+        <div className="flex flex-wrap gap-4 mt-auto pt-5">
 
           <a
             href={github}
