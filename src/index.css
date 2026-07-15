@@ -14,3 +14,12 @@ body{
 *{
   box-sizing:border-box;
 }
+
+/* Hide horizontal scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}

@@ -17,13 +17,34 @@ export default function Projects() {
           Some of my recent work
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
+        <div
+          className="
+            flex
+            gap-6
+            overflow-x-auto
+            snap-x
+            snap-mandatory
+            lg:grid
+            lg:grid-cols-3
+            lg:overflow-visible
+            pb-4
+            mt-20
+          "
+        >
 
           {projects.map((project) => (
-            <ProjectCard
+            <div
               key={project.title}
-              {...project}
-            />
+              className="
+                snap-center
+                flex-shrink-0
+                w-[90vw]
+                sm:w-[420px]
+                lg:w-auto
+              "
+            >
+              <ProjectCard {...project} />
+            </div>
           ))}
 
         </div>
